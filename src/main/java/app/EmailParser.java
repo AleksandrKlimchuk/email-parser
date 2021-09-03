@@ -8,7 +8,7 @@ import java.util.TreeMap;
 
 public class EmailParser implements Parser{
     @Override
-    public Map<String, String> parse(String stringToParse) {
+    public String parse(String stringToParse) {
 
         stringToParse = Objects.requireNonNull(stringToParse);
 
@@ -26,20 +26,21 @@ public class EmailParser implements Parser{
             }
         }
 
-        return parsedString;
+        //return parsedString;
+        return null;
     }
 
-    private Scanner initScannerFromString(String stringForScanner) {
-
-        InputStream inputStream = new ByteArrayInputStream(
-                stringForScanner.getBytes(/*StandardCharsets.UTF_8*/)
-        );
-
-        Reader reader = new BufferedReader(
-                new InputStreamReader(inputStream)
-        );
-
-        Scanner sc = new Scanner(reader);
-        return sc;
-    }
+//    private Scanner initScannerFromString(String stringForScanner) {
+//
+//        InputStream inputStream = new ByteArrayInputStream(
+//                stringForScanner.getBytes(/*StandardCharsets.UTF_8*/)
+//        );
+//
+//        Reader reader = new BufferedReader(
+//                new InputStreamReader(inputStream)
+//        );
+//
+//        Scanner sc = new Scanner(reader);
+//        return sc;
+//    }
 }
