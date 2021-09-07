@@ -43,7 +43,7 @@ public class Mail {
             String messageContent = body.getContent().toString();
 
             return new String(
-                    messageContent.getBytes(StandardCharsets.UTF_8)
+                    messageContent.getBytes(java.nio.charset.StandardCharsets.UTF_8)
             );
         }
     }
